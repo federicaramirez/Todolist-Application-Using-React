@@ -23,24 +23,34 @@ const Home = () => {
 
     }
 
+    function eliminarElemento(id) {
+        let sinEliminado = [];
+        sinEliminado = listaTareas.filter((item,index) => {
+            if (index !== id) {
+                return item
+            } 
+        } )
+        setListaTareas(sinEliminado);
+    }
+
     return (
-        <div className="text-center">
+        <div>
+            <div>
             <h1>Titulo</h1>
-            <div className="mb-3">
-                <input type="text" className="form-control" id="formGroupExampleInput" placeholder="Example input placeholder"
+            </div>
+            <div>
+                <input type="text" className="form-control justify-content-center" id="formGroupExampleInput" placeholder="Example input placeholder"
                     value={tarea}
                     onChange={
                         (e) => setTarea(e.target.value)
                     }
                     onKeyDown={subirTarea}/>
             </div>
-            <div className="conteiner d-flex justify-content-center">
                 <ul className="list-group list-group-flush">
-					
+					{listaTareas.map((item, id) => <li className = "list-group-item " key={id}>{item} <button type="button" class="btn btn-outline-primary float-end" onClick={()=> eliminarElemento(id)}>x</button></li> ) }
 				</ul>
 
             </div>
-        </div>
     );
 };
 
