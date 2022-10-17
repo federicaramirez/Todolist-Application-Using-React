@@ -1,4 +1,15 @@
 
-.body{
-    background-image: url ('https://www.google.com/url?sa=i&url=https%3A%2F%2Fsp.depositphotos.com%2Fvector-images%2Fbloc-de-notas.html&psig=AOvVaw0XkG8IYJrC1r8QVtpKlkC6&ust=1666058586279000&source=images&cd=vfe&ved=0CA0QjRxqFwoTCOjproaW5voCFQAAAAAdAAAAABAN') ;
+html, body{
+    background-image: url('https://image.api.playstation.com/vulcan/img/rnd/202010/2716/8pc2fi23ksuIvi0gEHO5EqV2.png');
+    background-repeat: no-repeat;
+    background-size: 1400px 700px
+}
+
+.hidden button{
+    display: none;
+    
+}
+
+.hidden:hover button {
+    display: block;
 }
